@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+
+<!--Hier wende ich an den Schlüssel mit Hilfe von ${}. Thymeleave wendet sich an das Model, bekommt dern Wert durch den Schlüssel name.-->
+<!--Hier müssen wir mit Hilfe von Thymeleave an den Wert durch das Schlüssel wenden-->
+<!--Mit Thymeleaf wiedergebe ich das Ergebnis, dass aus dem Model kommt-->
+
+<p th:text="'Result is, ' + ${result} + '!'" />
+
+</body>
+</html>

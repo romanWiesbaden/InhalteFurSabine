@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="musicBean"
+          class="ru.alishev.springcourse.ClassicalMusic">
+    </bean>
+
+    <bean id="musicPlayer"
+          class="ru.alishev.springcourse.MusicPlayer">
+<!--        Tag gibt den Wert für Property-->
+
+<!--        Link auf das Bean, den wir als die Dependency benutzen möchten-->
+<!--        Name unseres Setters-->
+<!--        Spring wird diese Dependency in unser MusicPlayer einfügen-->
+        <property name="music" ref="musicBean" />
+        <property name="name" value="Some name" />
+        <property name="volume" value="50" />
+
+
+    </bean>
+</beans>
